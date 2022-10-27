@@ -11,10 +11,10 @@ function superEventHandler(){
         changesOnText("blue","The mouse is here!");
     } else if(title.onmouseleave !== null) {
         changesOnText("tomato","The mouse is gone!");
-    } else if(window.resize === ){
+    } else if(window.resize !==null){
         changesOnText("purple","You just resized!");
-    } else if(window.oncontextmenu ===){
-        changesOnText("red","That was a right click!")
+    } else if(window.oncontextmenu !==null){
+        changesOnText("red","That was a right click!");
     }
 }
 
@@ -26,6 +26,20 @@ window.addEventListener("resize",superEventHandler);
 
 window.addEventListener("contextmenu",superEventHandler);
 
+// text1
 
+function test1(){
+    console.log(title.onmouseover);
+    console.dir(title.onmouseover);
+}
 
+title.addEventListener("mouseover",test1);
+
+// test2
+
+function test2(event){
+    console.dir(event);
+}
+
+title.addEventListener("mouseover",test2);
 
