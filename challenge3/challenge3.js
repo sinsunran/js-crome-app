@@ -9,8 +9,16 @@ const resultDiv = document.querySelector("#result");
 const explaination = document.createElement("span")
 const result = document.createElement("span")
 
-function prevent(event){
-    event.preventDefault();
+function buttonCheck(){
+  const rangeCheck = inputRange.value;
+  const guessCheck = inputGuess.value;
+  if(rangeCheck === "" || guessCheck===""){
+    playBtn.disabled = true;
+  } else if(parseInt(rangeCheck) < 0 || parseInt(guessCheck) < 0){
+    playBtn.disabled = true;
+  } else {
+    playBtn.disabled = false;
+  }
 }
 
 function handleClickPlay(event){
@@ -27,6 +35,6 @@ function handleClickPlay(event){
     explainationDiv.appendChild(explaination);
     resultDiv.appendChild(result);
 }
-// formBody.addEventListener("submit",prevent);
-playBtn.addEventListener("click",handleClickPlay);
 
+setInterval(buttonCheck,10);
+playBtn.addEventListener("click",handleClickPlay);
