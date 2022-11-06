@@ -23,7 +23,7 @@ function paintToDo(newToDo){
     const span = document.createElement("span");
     span.innerText = newToDo.text;
     const button = document.createElement("button");
-    button.innerText = "❌";
+    button.innerText = "✔";
     button.addEventListener("click", deleteToDO);
     li.appendChild(span);
     li.appendChild(button);
@@ -32,7 +32,6 @@ function paintToDo(newToDo){
 
 function handleToDoSubmit(event){
     event.preventDefault();
-    console.log(toDoInput.value);
     const newToDo =toDoInput.value;
     toDoInput.value="";
     const newToDoObj = {
@@ -42,10 +41,6 @@ function handleToDoSubmit(event){
     toDos.push(newToDoObj);
     paintToDo(newToDoObj);
     saveToDos();
-}
-
-function hello() {
-    console.log("hello");
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);

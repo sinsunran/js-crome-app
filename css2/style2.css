@@ -1,0 +1,19 @@
+@import "components/bg-img.css";
+@import "components/clock.css";
+@import "components/greeting.css";
+@import "components/quote.css";
+@import "components/todo.css";
+@import "components/weather.css";
+
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    
+}
+.hidden {
+    display: none;
+}

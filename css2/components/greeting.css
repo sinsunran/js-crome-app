@@ -1,0 +1,41 @@
+#login-form.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-form input[type="submit"]{
+    margin-top: 30px;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;    
+}
+
+#login-form input[type="text"]{
+    height: 60px;
+    width: 1000px;
+    background-color: transparent;
+    border: 0;
+    border-color: white;
+    font-size: 40px;
+}
+
+#login-form input[type="text"]::placeholder{
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+}
+
+#login-form input[type="text"]:focus{
+    outline: none;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    opacity: 0.8;
+    font-size: 40px;
+}
+
